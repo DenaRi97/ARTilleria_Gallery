@@ -1,18 +1,36 @@
-const buttons = document.querySelectorAll("[data-carousel-button]")
+document.addEventListener('DOMContentLoaded', function () {
+  var currentIndex = 0;
+  var items = document.querySelectorAll('.carousel-item');
+  var totalItems = items.length;
+  var itemsPerSlide = 4; // Number of items to show at once
 
-buttons.forEach(button => {
-  button.addEventListener("click", () => {
-    const offset = button.dataset.carouselButton === "next" ? 1 : -1
-    const slides = button
-      .closest("[data-carousel]")
-      .querySelector("[data-slides]")
+  function showItems() {
+      document.getElementById('photo-carousel').style.transform = 'translateX(' + (-currentIndex * (100 / itemsPerSlide)) + '%)';
+  }
 
-    const activeSlide = slides.querySelector("[data-active]")
-    let newIndex = [...slides.children].indexOf(activeSlide) + offset
-    if (newIndex < 0) newIndex = slides.children.length - 1
-    if (newIndex >= slides.children.length) newIndex = 0
+  function nextSlide() {
+      if (currentIndex < totalItems - itemsPerSlide) {
+          currentIndex += itemsPerSlide;
+      } else {
+          currentIndex = 0;
+      }
+      showItems();
+  }
 
-    slides.children[newIndex].dataset.active = true
-    delete activeSlide.dataset.active
-  })
-})
+  function prevSlide() {
+      if (currentIndex >= itemsPerSlide) {
+          currentIndex -= itemsPerSlide;
+      } else {
+          currentIndex = totalItems - itemsPerSlide;
+      }
+      showItems();
+  }
+
+  document.getElementById('next-btn').addEventListener('click', function () {
+      nextSlide();
+  });
+
+  document.getElementById('prev-btn').addEventListener('click', function () {
+      prevSlide();
+  });
+});

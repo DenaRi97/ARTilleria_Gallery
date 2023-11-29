@@ -169,81 +169,43 @@ h3{
 }
 /*-----Carousel----*/
 
-.carousel {
-    width: 51vw;
-    height: 60vh;
-    position:relative;
+#carousel-container {
+    width: 80%;
+    margin: 50px auto;
     overflow: hidden;
-    margin: auto;
-    display: flex; /* Agrega display: flex al contenedor principal del carrusel */
-  }
+    position: relative;
+}
 
-.slides-container{
+#photo-carousel {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: 300%; /* Ancho total de todas las diapositivas */
-  }
-  
-.carousel > ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  
-.slide {
+}
+
+.carousel-item {
+    width: 45%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 15.5rem;
+    height: 20rem;
+    object-fit: cover;
+}
+
+.text-overlay {
     position: absolute;
-    inset: 0;
-    opacity: 0;
-    transition: 200ms opacity ease-in-out;
-    transition-delay: 200ms;
-    flex: 0 0 20%; /* Ajusta el ancho de cada diapositiva según la cantidad de imágenes que quieras mostrar */  }
-  
-.slide > img {
-    display: block;
-    width: 40rem;
-    height: 25rem;
-    object-fit: contain;
-    object-position: center;
-  }
-  
-.slide[data-active] {
-    opacity: 1;
-    z-index: 1;
-    transition-delay: 0ms;
-  }
-  
-.carousel-button {
-    position: absolute;
-    z-index: 2;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    top: 100%;
-    transform: translateY(-50%);
-    color: rgba(255, 251, 179, 1);
-    cursor: pointer;
-    border-radius: .25rem;
-    padding: 0 .5rem;
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-  
-.carousel-button:hover,
-.carousel-button:focus {
-    color: rgba(0, 0, 0, 0.1);
-    background-color: rgba(255, 251, 179, .5);
-  }
-  
-.carousel-button:focus {
-    outline: 1px solid white;
-  }
-  
-.carousel-button.prev {
-    left: 3rem;
-  }
-  
-.carousel-button.next {
-    right: 3rem;
-  }
+    top: 90%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    text-align: center;
+    background-color: rgba(255, 251, 179, 0.5);
+    padding: 4% 12% 4% 12%;
+    border-radius: 6%;
+}
+
 
 /*------Hamburguesa------*/
 
