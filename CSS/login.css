@@ -1,48 +1,58 @@
-/*---ESTILOS BASE---*/
+/*////////ESTILOS BASE////////*/
 
 *{
     padding: 0;
-    margin: 0;
+    margin-inline: 1vw;
     box-sizing: border-box; 
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-/*Header*/
-#banner{
-    width: 50rem;
-    align-self: center;
+body{
+    background-image: url(../IMG/banner.png);
+    background-repeat:no-repeat;
     background-position: center;
-    margin: none;
-    padding: none;
+    background-position: top;
+    background-color: #DCEAFF;
 }
-
+#goTopBtn{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 18px;
+    padding: 1%;
+    border: none;
+    border-radius: 100%;
+    background-color: #ead1ff;
+    color: #2E0051;
+    cursor: pointer;
+}
+/*-------Header--------*/
 .brand-container{
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
     flex-direction: row;
+    margin-top: 1rem;
+    align-items: center;
 }
 
 header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    row-gap: 14.3rem;
+    margin: 0px;
 }
 
-body{
-    background-color: #DCEAFF;
-
-}
 
 #logo{
     width: 3rem;
     max-width: 3rem;
+    margin: 0px;
 }
 
 h1{
     font-family: Georgia;
     font-weight:500;
-    margin-inline: 10%;
 }
 
 #menu-bar{
@@ -64,6 +74,7 @@ h1{
     list-style: none;
     display: flex;
     gap: 3rem;
+    justify-content: flex-end;
 }
 
 .nav-links li a{
@@ -82,46 +93,52 @@ h1{
     font-size: 10px;
     background-color: #fbffd1;
     border-color: #fbffd1;
-    box-shadow: 0.2px 0.2px 0 1px #f6f3c5;
     border-radius: 30px;
     padding: 2px;
     padding-inline: 5px;
 }
 
-/*Footer*/
-#address{
-    font-size: 6px;
-    text-align: right;
-    color: #2E0051;
+
+.divider{
+    height: 5px;
+    width: 70%;
+    border: none;
+    background: rgb(219,181,249);
+    background: linear-gradient(90deg, rgba(219,181,249,1) 0%, rgba(255,255,255,0) 100%);
 }
+
+/*-----Footer----*/
 
 .footer-content{
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    height: 20%;
+    height: 10%;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 5%;
+    justify-content: space-between;
 }
-
-#copy{
+#address{
     font-size: 8px;
+    text-align: right;
     color: #2E0051;
 }
-#social-links{
-    display: grid;
-    grid-template-columns: 10% 10% 10%;
-    grid-template-rows: 10%;
-    justify-content: space-between;
-    column-gap: 1.25rem;
+#copy,
+#terms{
+    font-size: 8px;
+    color: #2E0051;
+    text-align: left;
 }
-.social-media, li{
+#social-links{
+    display: flex;
+    flex-direction: row;
+}
+.social-media li{
     display: flex;
     list-style: none;
     color:#2E0051;
-    display: inline;
-    margin: 2%;
-    width: 2%;
+    margin: 0px;
+    padding: 0px;
 }
 
 
@@ -133,7 +150,6 @@ h2{
     color: #2E0051;
     font-size: large;
 }
-
 h3{
     font-family: Georgia;
     font-weight: 600;
@@ -154,6 +170,7 @@ main {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 20px;
+    margin-top: 40%;
 }
 
 .formulario__label {
