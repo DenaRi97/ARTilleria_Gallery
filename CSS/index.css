@@ -189,10 +189,11 @@ h3{
 
 .carousel-item img {
     width: 13.2rem;
-    height: 20rem;
+    height: 18rem;
     object-fit: cover;
     margin: 0px;
     padding: 0px;
+    border-radius: 5%;
 }
 
 .text-overlay {
@@ -280,20 +281,54 @@ h3{
         flex-direction: column;
         align-items: end;
     }
-
-    /*#brand-container{
-        height: 20vh;
-    }
-
-    #banner{
-        height: 50rem;
-
-    }*/
-}
+  }
 
 /*///////RESPONSIVE////////*/
-@media screen and (max-width: 550px) {
-    body{
 
+@media only screen and (min-width: 550x) {
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        overflow: hidden;
+    }
+    
+    #carousel-container {
+        width: 100%; 
+        margin: 50px auto;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    #photo-carousel {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+    
+    .carousel-item {
+        width: 100%; 
+        box-sizing: border-box;
+        position: relative;
+    }
+    
+    .carousel-item img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .text-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+    }
+    #carousel-container {
+        width: 80%;
+    }
+
+    .carousel-item {
+        width: 50%;
     }
 }
+
