@@ -73,7 +73,7 @@ h1{
 .nav-links{
     list-style: none;
     display: flex;
-    gap: 3rem;
+    gap: 1rem;
     justify-content: flex-end;
 }
 
@@ -261,20 +261,20 @@ h3{
         visibility: hidden;
         display: flex;
         flex-direction: column;
-        align-items: end;
         gap: 0.5rem;
         position: absolute;
-        top: 0px;
-        right: 50px;
-        background-color: #ca87fe;
-        padding: 1rem;
+        top: 100PX;
+        right: 90px;
+        background-color: #f3e2fffd;
+        padding: 2%;
+        align-items: flex-end;
     }
 
     .nav.visible{
         opacity: 1;
         visibility: visible;
         margin: 40%;
-        width: 15vw;
+        width: 20vw;
         z-index: 1000;
     }
     .nav-links{
